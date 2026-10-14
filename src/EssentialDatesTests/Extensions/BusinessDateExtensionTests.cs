@@ -1,5 +1,5 @@
 ﻿using EssentialDates.Extensions;
-using FluentAssertions;
+using Shouldly;
 using Xunit;
 
 namespace EssentialDates.Tests.Extensions;
@@ -52,7 +52,7 @@ public class BusinessDateExtensionTests
     public void NextBusinessDay_GiveValidDates_ShouldReturnNextValidBusinessDate(DateTime testDate, DateTime expectedNextBusinessDate)
     {
         var result = testDate.NextBusinessDay();
-        result.Should().Be(expectedNextBusinessDate);
+        result.ShouldBe(expectedNextBusinessDate);
     }
 
     [Theory]
@@ -64,7 +64,7 @@ public class BusinessDateExtensionTests
     public void IsBusinessDay_GiveValidBusinessDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsBusinessDay();
-        result.Should().Be(true);
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -84,6 +84,6 @@ public class BusinessDateExtensionTests
     public void IsBusinessDay_GiveInValidBusinessDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsBusinessDay();
-        result.Should().Be(false);
+        result.ShouldBeFalse();
     }
 }
