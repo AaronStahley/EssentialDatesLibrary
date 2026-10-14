@@ -1,5 +1,5 @@
 ﻿using EssentialDates.Extensions;
-using FluentAssertions;
+using Shouldly;
 using Xunit;
 
 namespace EssentialDates.Tests.Extensions;
@@ -21,7 +21,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedFederalHoliday_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedFederalHoliday();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -40,7 +40,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedFederalHoliday_GivenInvalidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedFederalHoliday();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     [Theory]
@@ -59,7 +59,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedNewYearsDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedNewYearsDay(); 
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -82,7 +82,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedNewYearsDay_GivenInvalidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedNewYearsDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     [Theory]
@@ -101,7 +101,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedMlkDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedMlkDay();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -113,7 +113,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedMlkDay_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedMlkDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     [Theory]
@@ -132,7 +132,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedPresidentDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedPresidentDay();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -143,7 +143,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedPresidentDay_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedPresidentDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
     
     [Theory]
@@ -162,7 +162,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedMemorialDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedMemorialDay();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -174,7 +174,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedMemorialDay_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedMemorialDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     [Theory]
@@ -191,7 +191,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedJuneteenth_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedJuneteenth();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -214,7 +214,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedJuneteenth_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedJuneteenth();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     
@@ -234,7 +234,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedIndependenceDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedIndependenceDay();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -257,7 +257,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedIndependenceDay_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedIndependenceDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     [Theory]
@@ -276,7 +276,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedLaborDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedLaborDay();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -287,7 +287,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedLaborDay_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedLaborDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     [Theory]
@@ -306,7 +306,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedColumbusDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedColumbusDay();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -318,7 +318,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedColumbusDay_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedColumbusDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     [Theory]
@@ -337,7 +337,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedVeteranDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedVeteranDay();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -360,7 +360,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedVeteranDay_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedVeteranDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     [Theory]
@@ -379,7 +379,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedThanksgivingDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedThanksgivingDay();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -391,7 +391,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedThanksgivingDay_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedThanksgivingDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 
     [Theory]
@@ -410,7 +410,7 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedChristmasDay_GivenValidDates_ShouldReturnTrue(DateTime testDate)
     {
         var result = testDate.IsObservedChristmasDay();
-        result.Should().BeTrue();
+        result.ShouldBeTrue();
     }
 
     [Theory]
@@ -433,6 +433,6 @@ public class FederalHolidaysDateExtensionTests
     public void IsObservedChristmasDay_GivenInValidDates_ShouldReturnFalse(DateTime testDate)
     {
         var result = testDate.IsObservedChristmasDay();
-        result.Should().BeFalse();
+        result.ShouldBeFalse();
     }
 }
